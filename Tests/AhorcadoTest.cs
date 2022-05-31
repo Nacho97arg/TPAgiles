@@ -58,5 +58,13 @@ namespace Tests
             bool resultado = ahorcado.RealizarIntento("a");
             Assert.AreEqual(true, resultado);
         }
+
+        [TestMethod]
+        public void NoSeEncuentraEnPalabra_Test()
+        {
+            Ahorcado ahorcado = new Ahorcado("casa");
+            bool resultado = ahorcado.RealizarIntento("h");
+            Assert.AreEqual(false, resultado);
+        }
     }
 }
