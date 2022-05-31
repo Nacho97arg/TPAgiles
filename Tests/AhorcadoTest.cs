@@ -8,28 +8,19 @@ namespace Tests
     [TestClass]
     public class AhorcadoTest
     {
+        private Ahorcado ahorcado = new Ahorcado("casa");
         [TestMethod]
         public void PalabraSeleccionada_Test()
         {
-            Ahorcado ahorcado = new Ahorcado("casa");
+            //Ahorcado ahorcado = new Ahorcado("casa");
             string palabraEsperada = "casa";
-            Assert.AreEqual(palabraEsperada, ahorcado.PalabraAAdivinar);          
+            Assert.AreEqual(palabraEsperada, ahorcado.PalabraAAdivinar);
         }
-
-        //[TestMethod]
-        //public void IngresaLetraValida_Test()
-        //{
-        //    Ahorcado ahorcado = new Ahorcado("casa");   
-        //    bool letraValida  = ahorcado.IngresarLetra('a');
-        //    Assert.AreEqual(true, letraValida); 
-
-        //}
-
 
         [TestMethod]
         public void IngresaUnaSolaLetra_Test()
         {
-            Ahorcado ahorcado = new Ahorcado("casa");
+            //Ahorcado ahorcado = new Ahorcado("casa");
             bool letraValida = ahorcado.RealizarIntento("a");
             Assert.AreEqual(true, letraValida);
         }
@@ -37,7 +28,7 @@ namespace Tests
         [TestMethod]
         public void EliminarLetra_Test()
         {
-            Ahorcado ahorcado = new Ahorcado("casa");
+            //Ahorcado ahorcado = new Ahorcado("casa");
             ahorcado.RealizarIntento("a");
             bool letraEsta = ahorcado.Abecedario.Contains("a");
             Assert.AreEqual(false, letraEsta);
@@ -46,7 +37,7 @@ namespace Tests
         [TestMethod]
         public void RestarIntento_Test()
         {
-            Ahorcado ahorcado = new Ahorcado("casa");
+            //Ahorcado ahorcado = new Ahorcado("casa");
             ahorcado.RealizarIntento("a");
             Assert.AreEqual(9, ahorcado.Intentos);
         }
@@ -54,7 +45,7 @@ namespace Tests
         [TestMethod]
         public void SeEncuentraEnPalabra_Test()
         {
-            Ahorcado ahorcado = new Ahorcado("casa");
+            //Ahorcado ahorcado = new Ahorcado("casa");
             bool resultado = ahorcado.RealizarIntento("a");
             Assert.AreEqual(true, resultado);
         }
@@ -62,7 +53,7 @@ namespace Tests
         [TestMethod]
         public void NoSeEncuentraEnPalabra_Test()
         {
-            Ahorcado ahorcado = new Ahorcado("casa");
+            //Ahorcado ahorcado = new Ahorcado("casa");
             bool resultado = ahorcado.RealizarIntento("h");
             Assert.AreEqual(false, resultado);
         }
