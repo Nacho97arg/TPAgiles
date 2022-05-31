@@ -10,3 +10,9 @@ C:\Users\User\Documents\Ágiles\TPI\Entities\obj\Debug\Entities.csproj.AssemblyR
 C:\Users\User\Documents\Ágiles\TPI\Entities\obj\Debug\Entities.csproj.CoreCompileInputs.cache
 C:\Users\User\Documents\Ágiles\TPI\Entities\obj\Debug\Entities.dll
 C:\Users\User\Documents\Ágiles\TPI\Entities\obj\Debug\Entities.pdb
+D:\Documentos\2022 Agiles\TPAgiles\Entities\bin\Debug\Entities.dll
+D:\Documentos\2022 Agiles\TPAgiles\Entities\bin\Debug\Entities.pdb
+D:\Documentos\2022 Agiles\TPAgiles\Entities\obj\Debug\Entities.csproj.AssemblyReference.cache
+D:\Documentos\2022 Agiles\TPAgiles\Entities\obj\Debug\Entities.csproj.CoreCompileInputs.cache
+D:\Documentos\2022 Agiles\TPAgiles\Entities\obj\Debug\Entities.dll
+D:\Documentos\2022 Agiles\TPAgiles\Entities\obj\Debug\Entities.pdb
