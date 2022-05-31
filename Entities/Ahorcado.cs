@@ -25,7 +25,7 @@ namespace Entities
         public bool RealizarIntento(string letra)
         {
             Intentos -= 1;
-            if(!(letra.Length > 1))
+            if(!(letra.Length > 1) && PalabraAAdivinar.Contains(letra))
             {
                 Abecedario = Abecedario.Remove(Abecedario.IndexOf(letra));
                 return true;

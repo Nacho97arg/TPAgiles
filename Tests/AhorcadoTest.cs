@@ -42,13 +42,21 @@ namespace Tests
             bool letraEsta = ahorcado.Abecedario.Contains("a");
             Assert.AreEqual(false, letraEsta);
         }
-
+        
         [TestMethod]
         public void RestarIntento_Test()
         {
             Ahorcado ahorcado = new Ahorcado("casa");
             ahorcado.RealizarIntento("a");
             Assert.AreEqual(9, ahorcado.Intentos);
+        }
+
+        [TestMethod]
+        public void SeEncuentraEnPalabra_Test()
+        {
+            Ahorcado ahorcado = new Ahorcado("casa");
+            bool resultado = ahorcado.RealizarIntento("a");
+            Assert.AreEqual(true, resultado);
         }
     }
 }
