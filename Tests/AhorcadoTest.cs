@@ -9,6 +9,7 @@ namespace Tests
     public class AhorcadoTest
     {
         private Ahorcado ahorcado = new Ahorcado("casa");
+
         [TestMethod]
         public void PalabraSeleccionada_Test()
         {
@@ -21,14 +22,6 @@ namespace Tests
         {
             bool letraValida = ahorcado.RealizarIntento("a");
             Assert.AreEqual(true, letraValida);
-        }
-
-        [TestMethod]
-        public void EliminarLetra_Test()
-        {
-            ahorcado.RealizarIntento("a");
-            bool letraEsta = ahorcado.Abecedario.Contains("a");
-            Assert.AreEqual(false, letraEsta);
         }
         
         [TestMethod]
@@ -60,6 +53,39 @@ namespace Tests
             ahorcado.RealizarIntento("s");
 
             Assert.AreEqual(Ahorcado.Estados.Ganada , ahorcado.Estado);
+        }
+
+        [TestMethod]
+        public void GuardaLetraValida_Test()
+        {
+            ahorcado.RealizarIntento("c");
+
+            Assert.AreEqual("c", ahorcado.LetrasAcertadas[0]);
+        }
+
+        [TestMethod]
+        public void GuardaLetraInvalida_Test()
+        {
+            ahorcado.RealizarIntento("j");
+
+            Assert.AreEqual("j", ahorcado.LetrasIncorrectas[0]);
+        }
+
+        [TestMethod]
+        public void ComprobarEstado_Test()
+        {
+            ahorcado.RealizarIntento('a');
+            ahorcado.RealizarIntento('b');
+            ahorcado.RealizarIntento('c');
+            ahorcado.RealizarIntento('d');
+            ahorcado.RealizarIntento('e');
+            ahorcado.RealizarIntento('f');
+            ahorcado.RealizarIntento('g');
+            ahorcado.RealizarIntento('h');
+            ahorcado.RealizarIntento('i');
+            ahorcado.RealizarIntento('j');
+
+            Assert.AreEqual(Ahorcado.Estados.Perdida, ahorcado.Estado);
         }
     }
 }

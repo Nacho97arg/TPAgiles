@@ -11,8 +11,6 @@ namespace Entities
     {
         public string PalabraAAdivinar { get; set; }
 
-        public string Abecedario { get; set; }
-
         public int Intentos { get; set; }
 
         public Estados Estado { get; private set; }
@@ -26,18 +24,23 @@ namespace Entities
         public Ahorcado(string palabra)
         {
             PalabraAAdivinar = palabra;
-            Abecedario = "abcdefghijklmnñopqrstuvwxyz";
             Intentos = 10;
             Estado = Estados.Jugando;
         }
 
         public bool RealizarIntento(string letra)
         {
+            if (Intentos == 0 && Estado != Estados.Ganada)
+            {
+                Estado = Estados.Perdida;
+                return false;
+            }
+           
             Intentos -= 1;
-            if(!(letra.Length > 1) && PalabraAAdivinar.Contains(letra))
+
+            if(!(letra.Length > 1) && PalabraAAdivinar.Contains(letra) && Estado == Estados.Jugando)
             {
                 LetrasAcertadas.Add(letra);
-                //Abecedario = Abecedario.Remove(Abecedario.IndexOf(letra));
                 if (PartidaGanada())
                 {
                     Estado = Estados.Ganada;
@@ -50,6 +53,7 @@ namespace Entities
                 return false;
             }
         }
+    
 
         private bool PartidaGanada()
         {
