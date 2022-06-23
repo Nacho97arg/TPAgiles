@@ -42,6 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Ahorcado.cs" />
+    <Compile Include="Auxiliares\Validaciones.cs" />
+    <Compile Include="PartidaAhorcado.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

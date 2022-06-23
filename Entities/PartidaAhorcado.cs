@@ -7,12 +7,13 @@ using Entities.Auxiliares;
 
 namespace Entities
 {
-    class PartidaAhorcado
+    public class PartidaAhorcado
     {
         private const int NUMERO_INTENTOS_MAX = 10;
 
-        private readonly string PalabraAAdivinar;
-        private int Intentos;
+        public readonly string PalabraAAdivinar;
+        public int Intentos;
+        public enum Estados { Jugando, Ganada, Perdida }
 
         public Estados Estado { get; private set; }
 
@@ -38,6 +39,7 @@ namespace Entities
                     PartidaGanada();
                     return true;
                 }
+
                 LetrasIncorrectas.Add(letra);
                 Intentos--;
                 PartidaPerdida();
@@ -49,6 +51,7 @@ namespace Entities
                 return false;
             }
         }
+
         private void PartidaGanada()
         {
             foreach (char letra in PalabraAAdivinar)
@@ -66,6 +69,6 @@ namespace Entities
             if (this.Intentos == 0)
                 Estado = Estados.Perdida;
         }
-        public enum Estados { Jugando, Ganada, Perdida }
+       
     }
 }

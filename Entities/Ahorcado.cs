@@ -33,8 +33,5 @@ namespace Entities
             }
         }
     
-
-        
-
     }
 }
