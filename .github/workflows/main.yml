@@ -22,9 +22,14 @@ jobs:
  
     - name: Restore
       run: dotnet restore
+      
+    - name: Official SonarQube Scan
+      uses: SonarSource/sonarqube-scan-action@v1.1.0
  
     - name: Build
       run: dotnet build --configuration Release --no-restore
  
     - name: Test
       run: dotnet test --no-restore
+      
+
