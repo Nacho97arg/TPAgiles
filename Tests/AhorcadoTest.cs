@@ -28,7 +28,7 @@ namespace Tests
         public void RestarIntento_Test()
         {
             ahorcado.RealizarIntento("t");
-            Assert.AreEqual(9, ahorcado.Intentos);
+            Assert.AreEqual(8, ahorcado.Intentos);
         }
 
         [TestMethod]
