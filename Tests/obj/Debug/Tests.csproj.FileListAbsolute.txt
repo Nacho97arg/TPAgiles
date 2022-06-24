@@ -59,3 +59,20 @@ D:\Documentos\2022 Agiles\TPAgiles\Tests\obj\Debug\Tests.csproj.CoreCompileInput
 D:\Documentos\2022 Agiles\TPAgiles\Tests\obj\Debug\Tests.csproj.CopyComplete
 D:\Documentos\2022 Agiles\TPAgiles\Tests\obj\Debug\Tests.dll
 D:\Documentos\2022 Agiles\TPAgiles\Tests\obj\Debug\Tests.pdb
+C:\Users\camvi\source\repos\Ahorcado\TPAgiles\Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\camvi\source\repos\Ahorcado\TPAgiles\Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\camvi\source\repos\Ahorcado\TPAgiles\Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\camvi\source\repos\Ahorcado\TPAgiles\Tests\bin\Debug\Microsoft.TestPlatform.AdapterUtilities.dll
+C:\Users\camvi\source\repos\Ahorcado\TPAgiles\Tests\bin\Debug\Tests.dll
+C:\Users\camvi\source\repos\Ahorcado\TPAgiles\Tests\bin\Debug\Tests.pdb
+C:\Users\camvi\source\repos\Ahorcado\TPAgiles\Tests\bin\Debug\Entities.dll
+C:\Users\camvi\source\repos\Ahorcado\TPAgiles\Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\camvi\source\repos\Ahorcado\TPAgiles\Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\camvi\source\repos\Ahorcado\TPAgiles\Tests\bin\Debug\Entities.pdb
+C:\Users\camvi\source\repos\Ahorcado\TPAgiles\Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\camvi\source\repos\Ahorcado\TPAgiles\Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\camvi\source\repos\Ahorcado\TPAgiles\Tests\obj\Debug\Tests.csproj.AssemblyReference.cache
+C:\Users\camvi\source\repos\Ahorcado\TPAgiles\Tests\obj\Debug\Tests.csproj.CoreCompileInputs.cache
+C:\Users\camvi\source\repos\Ahorcado\TPAgiles\Tests\obj\Debug\Tests.csproj.CopyComplete
+C:\Users\camvi\source\repos\Ahorcado\TPAgiles\Tests\obj\Debug\Tests.dll
+C:\Users\camvi\source\repos\Ahorcado\TPAgiles\Tests\obj\Debug\Tests.pdb

@@ -9,63 +9,29 @@ namespace Entities
 {
     public class Ahorcado
     {
-        public string PalabraAAdivinar { get; set; }
+        PartidaAhorcado PartidaActual;
+        List<PartidaAhorcado> _Partidas;  
 
-        public int Intentos { get; set; }
-
-        public Estados Estado { get; private set; }
-
-        public List<string> LetrasAcertadas = new List<string>();
-
-        public List<string> LetrasIncorrectas = new List<string>();
-
-        public enum Estados { Jugando, Ganada, Perdida }
-
-        public Ahorcado(string palabra)
+        public Ahorcado()
         {
-            PalabraAAdivinar = palabra;
-            Intentos = 10;
-            Estado = Estados.Jugando;
+            _Partidas = new List<PartidaAhorcado>();
         }
 
-        public bool RealizarIntento(string letra)
+        public void Inicializar()
         {
-            if (Intentos == 0 && Estado != Estados.Ganada)
-            {
-                Estado = Estados.Perdida;
-                return false;
-            }
-           
-            Intentos -= 1;
+            PartidaActual = new PartidaAhorcado("Casa");
+        }
 
-            if(!(letra.Length > 1) && PalabraAAdivinar.Contains(letra) && Estado == Estados.Jugando)
+        public bool IntentarLetra(string letra)
+        {
+            switch (PartidaActual.Estado)
             {
-                LetrasAcertadas.Add(letra);
-                if (PartidaGanada())
-                {
-                    Estado = Estados.Ganada;
-                }
-                return true;
-            }
-            else
-            {
-                LetrasIncorrectas.Add(letra);
-                return false;
+                case PartidaAhorcado.Estados.Jugando:
+                        return PartidaActual.RealizarIntento(letra);                    
+                default:
+                    return false;
             }
         }
     
-
-        private bool PartidaGanada()
-        {
-            foreach (char letra in PalabraAAdivinar)
-            {
-                if (!LetrasAcertadas.Contains(letra.ToString()))
-                {
-                    return false;
-                }
-            }
-            return true;
-        }
-
     }
 }

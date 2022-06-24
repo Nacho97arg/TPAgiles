@@ -8,7 +8,7 @@ namespace Tests
     [TestClass]
     public class AhorcadoTest
     {
-        private Ahorcado ahorcado = new Ahorcado("casa");
+        private PartidaAhorcado ahorcado = new PartidaAhorcado("casa");
 
         [TestMethod]
         public void PalabraSeleccionada_Test()
@@ -27,7 +27,7 @@ namespace Tests
         [TestMethod]
         public void RestarIntento_Test()
         {
-            ahorcado.RealizarIntento("a");
+            ahorcado.RealizarIntento("t");
             Assert.AreEqual(9, ahorcado.Intentos);
         }
 
@@ -52,7 +52,7 @@ namespace Tests
             ahorcado.RealizarIntento("a");
             ahorcado.RealizarIntento("s");
 
-            Assert.AreEqual(Ahorcado.Estados.Ganada , ahorcado.Estado);
+            Assert.AreEqual(PartidaAhorcado.Estados.Ganada , ahorcado.Estado);
         }
 
         [TestMethod]
@@ -74,18 +74,19 @@ namespace Tests
         [TestMethod]
         public void ComprobarEstado_Test()
         {
-            ahorcado.RealizarIntento('a');
-            ahorcado.RealizarIntento('b');
-            ahorcado.RealizarIntento('c');
-            ahorcado.RealizarIntento('d');
-            ahorcado.RealizarIntento('e');
-            ahorcado.RealizarIntento('f');
-            ahorcado.RealizarIntento('g');
-            ahorcado.RealizarIntento('h');
-            ahorcado.RealizarIntento('i');
-            ahorcado.RealizarIntento('j');
+            ahorcado.RealizarIntento("b");
+            ahorcado.RealizarIntento("d");
+            ahorcado.RealizarIntento("e");
+            ahorcado.RealizarIntento("f");
+            ahorcado.RealizarIntento("g");
+            ahorcado.RealizarIntento("h");
+            ahorcado.RealizarIntento("i");
+            ahorcado.RealizarIntento("j");
+            ahorcado.RealizarIntento("k");
+            ahorcado.RealizarIntento("l");
+            ahorcado.RealizarIntento("m");
 
-            Assert.AreEqual(Ahorcado.Estados.Perdida, ahorcado.Estado);
+            Assert.AreEqual(PartidaAhorcado.Estados.Perdida, ahorcado.Estado);
         }
     }
 }
