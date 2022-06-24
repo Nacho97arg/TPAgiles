@@ -39,4 +39,13 @@ jobs:
     - name: Test
       run: dotnet test --no-restore
       
+  tests:
+    
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: .Net Unit Test
+      uses: RachelGanonNew/Run-All-.Net-Unit-Test@v1.2.1
+
+      
 
