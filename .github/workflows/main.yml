@@ -51,7 +51,7 @@ jobs:
       uses: actions/checkout@v2
       
     - name: Publish
-      run: dotnet publish -c Release -o /www/
+      run: dotnet publish -p:PublishProfile=FolderProfile
     
     - name: Sync files
       uses: sebastianpopp/ftp-action@releases/v2
