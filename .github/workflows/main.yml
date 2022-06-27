@@ -49,6 +49,9 @@ jobs:
     steps:
     - name: Get latest code
       uses: actions/checkout@v2
+      
+    - name: Publish
+      run: dotnet publish -c Release -o /www/
     
     - name: Sync files
       uses: sebastianpopp/ftp-action@releases/v2
