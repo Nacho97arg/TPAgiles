@@ -39,6 +39,9 @@ jobs:
     - name: Test
       run: dotnet test ./Tests/bin/Debug/Tests.dll --logger:"console;verbosity=normal"
       
+    - name: Publish
+      run: dotnet publish
+      
 
 
   web-deploy:
@@ -50,8 +53,6 @@ jobs:
     - name: Get latest code
       uses: actions/checkout@v2
       
-    - name: Publish
-      run: dotnet publish -p:PublishProfile=FolderProfile
     
     - name: Sync files
       uses: sebastianpopp/ftp-action@releases/v2
