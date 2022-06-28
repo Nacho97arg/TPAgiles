@@ -33,17 +33,20 @@ jobs:
     - name: Restore
       run: dotnet restore
       
-    - name: Build
-      uses: microsoft/setup-msbuild@v1.1
+    - name: Build App
+      run: msbuild Ahorcado.sln /p:Configuration=Release /p:DeployOnBuild=true /p:PublishProfile=FolderProfile -verbosity:diag
+ 
+    - name: Upload artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: Ahorcado
+        path: "D:/a/newbuild/"
       
     - name: Test
       run: dotnet test ./Tests/bin/Debug/Tests.dll --logger:"console;verbosity=normal"
       
-    - name: Dotnet Publish
-      run: dotnet publish 
       
-
-
+      
   web-deploy:
     name: Deploy
     runs-on: ubuntu-latest
