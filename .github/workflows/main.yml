@@ -43,7 +43,7 @@ jobs:
       run: msbuild .\Ahorcado.sln
       
     - name: Publish webapp
-      run: msbuild ./UI.Web/UI.Web.csproj /t:Package /P:Configuration=Staging;PackageLocation=".\Package.zip"
+      run: msbuild ./UI.Web/UI.Web.csproj /t:Package /P:Configuration=Staging;PackageLocation="D:\a\TPAgiles\Package.zip"
       
     - name: View Active Direcetory
       run: dir
