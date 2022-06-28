@@ -41,6 +41,12 @@ jobs:
 
     - name: Run msbuild
       run: msbuild .\Ahorcado.sln
+    
+    - name: Upload artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: Ahorcado
+        path: "D:/a/newbuild/"
       
     - name: Test
       run: dotnet test ./Tests/bin/Debug/Tests.dll --logger:"console;verbosity=normal"
