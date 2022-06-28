@@ -24,16 +24,8 @@ jobs:
  
     steps:
     - uses: actions/checkout@v2
-    
-#    - name: Setup .NET SDK
-#      uses: actions/setup-dotnet@v1.7.2
-#      with:
-#        dotnet-version: 5.0.x
- 
-#    - name: Restore
-#      run: dotnet restore
       
-    - name: NuGet to restore dependencies as well as project-specific tools that are specified in the project file
+    - name: NuGet to restore 
       run: nuget restore
 
     - name: Add msbuild to PATH
@@ -41,20 +33,14 @@ jobs:
 
     - name: Run msbuild
       run: msbuild .\Ahorcado.sln
-      
-    - name: Publish
-      run: dotnet publish -c Release --output ./Release
-      
-    - name: Publish webapp
-      run: msbuild ./UI.Web/UI.Web.csproj /t:Package #/P:Configuration=Staging;PackageLocation="D:\a\TPAgiles\Package.zip"
-      
-    - name: View Active Direcetory
-      run: dir
-  
+          
     - name: Test
       run: dotnet test ./Tests/bin/Debug/Tests.dll --logger:"console;verbosity=normal"
       
       
+    - name: Publish webapp
+      run: msbuild ./UI.Web/UI.Web.csproj /t:Package /p:DeployOnBuild=true /p:PublishProfile=Test
+
       
   web-deploy:
     name: Deploy
