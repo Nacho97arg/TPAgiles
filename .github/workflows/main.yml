@@ -25,13 +25,13 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     
-    - name: Setup .NET SDK
-      uses: actions/setup-dotnet@v1.7.2
-      with:
-        dotnet-version: 5.0.x
+#    - name: Setup .NET SDK
+#      uses: actions/setup-dotnet@v1.7.2
+#      with:
+#        dotnet-version: 5.0.x
  
-    - name: Restore
-      run: dotnet restore
+#    - name: Restore
+#      run: dotnet restore
       
     - name: NuGet to restore dependencies as well as project-specific tools that are specified in the project file
       run: nuget restore
@@ -41,13 +41,10 @@ jobs:
 
     - name: Run msbuild
       run: msbuild .\Ahorcado.sln
-    
-    - name: Upload artifact
-      uses: actions/upload-artifact@v2
-      with:
-        name: Ahorcado
-        path: "D:/a/newbuild/"
       
+    - name: Publish webapp
+      run: msbuild ./UI.Web/UI.Web.csproj /t:Publish
+  
     - name: Test
       run: dotnet test ./Tests/bin/Debug/Tests.dll --logger:"console;verbosity=normal"
       
