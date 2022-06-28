@@ -44,6 +44,9 @@ jobs:
       
     - name: Publish webapp
       run: msbuild ./UI.Web/UI.Web.csproj /t:Package /P:Configuration=Staging;PackageLocation=".\Package.zip"
+      
+    - name: View Active Direcetory
+      run: dir
   
     - name: Test
       run: dotnet test ./Tests/bin/Debug/Tests.dll --logger:"console;verbosity=normal"
