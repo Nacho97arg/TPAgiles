@@ -40,7 +40,7 @@ jobs:
       run: dotnet test ./Tests/bin/Debug/Tests.dll --logger:"console;verbosity=normal"
       
     - name: Dotnet Publish
-      run: dotnet publish src -c Release -o deploy
+      run: dotnet publish 
       
 
 
