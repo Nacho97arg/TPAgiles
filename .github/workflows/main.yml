@@ -43,7 +43,7 @@ jobs:
       run: msbuild .\Ahorcado.sln
       
     - name: Publish webapp
-      run: msbuild ./UI.Web/UI.Web.csproj /t:Publish
+      run: msbuild ./UI.Web/UI.Web.csproj /t:Package
   
     - name: Test
       run: dotnet test ./Tests/bin/Debug/Tests.dll --logger:"console;verbosity=normal"
